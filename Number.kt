@@ -5,25 +5,25 @@ import java.util.*
 fun main(args: Array<String>) {
     val min = 0
     val max = 100
-    var nbAttempts = 0
+    var nbAtmpts = 0
     val random = SplittableRandom()
     val reader = Scanner(System.`in`)
     val goal = random.nextInt(min, max)
-    var userGuess: Int
+    var usGuss: Int
 
     computerSays("I chose a number between $min and $max")
     
     do {
-        nbAttempts++
+        nbAtmpts++
         computerSays("What's your guess?")
-        userGuess = reader.nextInt()
+        usGuss = reader.nextInt()
         when {
-    userGuess > goal -> computerSays("less !")
-    userGuess < goal -> computerSays("more !")
-    userGuess == goal -> computerSays("Congratulation ! You found in $nbAttempts attemps.")
-}while(userGuess != goal)
+    usGuss > goal -> computerSays("less !")
+    usGuss < goal -> computerSays("more !")
+    usGuss == goal -> computerSays("Congratulation ! You found correct number in $nbAtmpts attempts.")
+}while(usGuss != goal)
 
-    computerSays("Congratulation ! You found in $nbAttempts attemps.")
+    computerSays("Congratulation ! You found correct number in $nbAtmpts attempts.")
 }
 
 fun String.outputAsComputer() {
