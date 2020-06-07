@@ -12,6 +12,7 @@ fun main(args: Array<String>) {
     var userGuess: Int
 
     computerSays("I chose a number between $min and $max")
+    
     do {
         nbAttempts++
         computerSays("What's your guess?")
